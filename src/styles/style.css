@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.glav{
+    position: absolute;
+    top: 2%;
+    left: 50%;
+    transform: translate(-50%, 2%);
+    color: white;
+    font-size: 40px;
+    filter: drop-shadow(0 0px 15px aqua);
+}
+img{
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    transform: translate(-50%, -20%);
+    width: 300px;
+}
+.slider{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.middl{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.navig{
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+.bar1, .bar2, .bar3, .bar4{
+    height: 100px;
+    width: 200px;
+    border-radius: 10px;
+    margin: 15px;
+    cursor: pointer;
+    opacity: .5;
+    transition: .4s;
+}
+.bar1{
+    background: url('../assets/images/one.jpg');
+    background-size: cover;
+}
+.bar2{
+    background: url('../assets/images/two.jpg');
+    background-size: cover;
+}
+.bar3{
+    background: url('../assets/images/three.jpg');
+    background-size: cover;
+}
+.bar4{
+    background: url('../assets/images/four.jpg');
+    background-size: cover;
+}
+label:hover{
+    opacity: 1;
+    transform: scale(1.1);
+}
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+.slides{
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+.slide{
+    position: relative;
+    width: 25%;
+    transition: .6s;
+}
+.slide video{
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+}
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -25%;
+}
+#r3:checked ~ .s1{
+    margin-left: -50%;
+}
+#r4:checked ~ .s1{
+    margin-left: -75%;
+}
+#r1:checked ~ .navig .bar1, #r2:checked ~ .navig .bar2, #r3:checked ~ .navig .bar3, #r4:checked ~ .navig .bar4{
+    opacity: 1;
+    transform: scale(1.1);
+}
+#one, #two, #three, #four{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    width: 800px;
+    height: 600px;
+    border-radius: 30px;
+    background-color: rgba(128, 128, 128, 0.87);
+}
+.slide button{
+    font-size: 18px;
+    position: absolute;
+    left: 250px;
+    bottom: 5%;
+    width: 300px;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    transition: .4s;
+    background-color: rgb(56, 54, 54);
+}
+.slide button:hover{
+    background-color: orange;
+    position: absolute;
+    transform: scale(1.2);
+}
+p{
+    position: absolute;
+    width: 600px;
+    color: rgb(221, 212, 212);
+    left: 100px;
+    font-size: 20px;
+    bottom: 150px;
+}
+b{
+    position: absolute;
+    width: 600px;
+    color: rgb(221, 212, 212);
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 20px;
+    bottom: 250px;
+}
+#one span, #two span, #three span, #four span{
+    position: absolute;
+    width: 600px;
+    color: orange;
+    left: 100px;
+    font-size: 20px;
+    top: 280px;
+}
+#one span::after{
+    content: '2023, Папины дочки. Новые (2 сезона)';
+    color: rgba(255, 255, 255, 0.733);
+    position: absolute;
+    left: 35px;
+}
+#two span::after{
+    content: '2023, Три богатыря и Пуп Земли';
+    color: rgba(255, 255, 255, 0.733);
+    position: absolute;
+    left: 35px;
+}
+#three span::after{
+    content: '2024, Зло (1 сезон)';
+    color: rgba(255, 255, 255, 0.733);
+    position: absolute;
+    left: 35px;
+}
+#four span::after{
+    content: '2018, Шифр (4 сезона)';
+    color: rgba(255, 255, 255, 0.733);
+    position: absolute;
+    left: 35px;
+}
+.block-one, .block-two, .block-three, .block-four{
+    display: none;
+}
+@media screen and (min-width:767px) and (max-width:1024px) {
+    .bar1, .bar2, .bar3, .bar4{
+        height: 100px;
+        width: 170px;
+    }
+    #one, #two, #three, #four{
+        width: 700px;
+        height: 600px;
+    }
+    b{
+        position: absolute;
+        width: 300px;
+        left: 250px;
+    }
+    p{
+        position: absolute;
+        width: 550px;
+        left: 100px;
+        bottom: 130px;
+    }
+    .slide button{
+        position: absolute;
+        left: 200px;
+        bottom: 5%;
+        width: 300px;
+        height: 50px;
+    }
+}
+@media screen and (max-width:767px){
+    #one, #two, #three, #four{
+        width: 350px;
+        height: 300px;
+    }
+    .slide button{
+        font-size: 13px;
+        position: absolute;
+        left: 80px;
+        bottom: 3%;
+        width: 200px;
+        height: 40px;
+    }
+    img{
+        position: absolute;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%, -10%);
+        width: 100px;
+    }
+    .glav{
+        font-size: 20px;
+    }
+    b{
+        position: absolute;
+        width: 300px;
+        bottom: 140px;
+        left: 200px;
+        font-size: 13px;
+    }
+    p{
+        position: absolute;
+        width: 300px;
+        font-size: 13px;
+        left: 50px;
+        bottom: 60px;
+    }
+    #one span, #two span, #three span, #four span{
+        position: absolute;
+        width: 300px;
+        left: 50px;
+        font-size: 13px;
+        top: 120px;
+    }
+    .navig{
+        position: absolute;
+        transition: .4s;
+        bottom: 16px;
+        left: 5px;
+        transform: none;
+        display: flex;
+        overflow: hidden;
+    }
+    .left, .right{
+        display: inline-flex;
+        width: 20px;
+        height: 20px;
+    }
+    .left{
+        position: absolute;
+        bottom: 60px;
+        left: 10px;
+        border-top: 3px solid gray;
+        border-left: 3px solid gray;
+        transform: rotate(-45deg);
+    }
+    .right{
+        position: absolute;
+        right: 10px;
+        bottom: 60px;
+        border-top: 3px solid gray;
+        border-right: 3px solid gray;
+        transform: rotate(45deg);
+    }
+}

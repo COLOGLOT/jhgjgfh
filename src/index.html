@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" href="favicon.ico" type="image/ico">
+    <meta name="theme-color" content="#ffffff" />
+    <title>Кинотеатор</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="content">
+        <div class="slider middl">
+            <div class="slides">
+                <input type="radio" name="r" id="r1" checked>
+                <input type="radio" name="r" id="r2">
+                <input type="radio" name="r" id="r3">
+                <input type="radio" name="r" id="r4">
+                <span class="glav">Сегодня в показе</span>
+                <div class="slide s1">
+                    <img src="assets/images/1.png">
+                    <a href="#" id="a1"><video muted autoplay loop src="assets/vidio/1.mp4"></video></a>
+                    <div class="block-one" id="one">
+                        <img src="assets/images/1.png">
+                        <span>9.4 </span>
+                        <b>Комедии, Семейные 12+</b>
+                        <p>Любимые герои возвращаются в продолжении легендарного сериала: Даша сбегает от Веника, оставив его с четырьмя дочерьми.
+                            На помощь отцу-одиночке приходит дружное семейство Васнецовых.</p>
+                        <button id="btn-one">Забронировать место</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/2.png">
+                    <a href="#" id="a2"><video muted autoplay loop src="assets/vidio/2.mp4"></video></a>
+                    <div class="block-two" id="two">
+                        <img src="assets/images/2.png">
+                        <span>9.2 </span>
+                        <b>Мультфильмы, Приключения 85 мин 6+</b>
+                        <p>Приключения любимых героев в доисторические времена. Новая часть суперпопулярной сказочной франшизы</p>
+                        <button id="btn-two">Забронировать место</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/3.jpg">
+                    <a href="#" id="a3"><video muted autoplay loop src="assets/vidio/3.mp4"></video></a>
+                    <div class="block-three" id="three">
+                        <img src="assets/images/3.jpg">
+                        <span>8.9 </span>
+                        <b>Детективы, Криминал
+                            16+</b>
+                        <p>Честный журналист вступает в неравную схватку с криминальными авторитетами и их влиятельными покровителями. Ретро-детектив с Даниилом Страховым</p>
+                        <button id="btn-three">Забронировать место</button>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="assets/images/4.png">
+                    <a href="#" id="a4"><video muted autoplay loop src="assets/vidio/4.mp4"></video></a>
+                    <div class="block-four" id="four">
+                        <img src="assets/images/4.png">
+                        <span>9.3 </span>
+                        <b>Детективы
+                            16+</b>
+                        <p>Четыре подруги с уникальными аналитическими талантами расследуют особо сложные дела. Продолжение популярного ретро-детектива</p>
+                        <button id="btn-four">Забронировать место</button>
+                    </div>
+                </div>
+                <div class="navig" id="nav">
+                    <label for="r1" class="bar1"></label>
+                    <label for="r2" class="bar2"></label>
+                    <label for="r3" class="bar3"></label>
+                    <label for="r4" class="bar4"></label>
+                </div>
+                <a href="#" class="left" id="left"></a>
+                <a href="#" class="right" id="right"></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="styles/components/main.js"></script>
+</body>
+</html>
